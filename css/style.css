@@ -441,3 +441,196 @@ height: 250px;
      color: rgb(0,0,0,0.6);
      padding: 10px 0px;
 }
+/* ===========================
+   Responsive CSS
+=========================== */
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+@media (max-width:992px){
+
+.Topbar>.Topbargrid,
+.header,
+.Banner>.text,
+.brandslogo>.imgs,
+.newArriavals,
+.dressStyle,
+.testimonial,
+.footer>.box,
+.newsletter{
+    width:95%;
+}
+
+.header{
+    grid-template-columns:1fr;
+    gap:20px;
+    text-align:center;
+}
+
+.header>.search>.searchgroup{
+    width:100%;
+}
+
+.header>.search>.searchgroup>input{
+    width:85%;
+}
+
+.Banner>.text h1,
+.Banner>.text p,
+.Banner>.text .counter{
+    width:100%;
+}
+
+.newArriavalsGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.testimonial>.testimonialGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.footer>.box>.top{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.newsletter{
+    flex-direction:column;
+    text-align:center;
+}
+
+.newsletter>.text{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.newsletter>.input{
+    width:100%;
+}
+
+.newsletter>.input>button,
+.newsletter>.input>.inputGroup{
+    width:100%;
+}
+
+.newsletter>.input>.inputGroup>input{
+    width:85%;
+}
+
+}
+@media (max-width:768px){
+
+.Topbar>.Topbargrid{
+    width:95%;
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.Topbar>.Topbargrid>.left,
+.Topbar>.Topbargrid>.xmark{
+    display:none;
+}
+
+.header{
+    width:95%;
+}
+
+.header>.navbar{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.Banner{
+    padding:40px 20px;
+}
+
+.Banner>.img1,
+.Banner>.img2{
+    display:none;
+}
+
+.Banner>.text h1{
+    font-size:36px;
+}
+
+.Banner>.text p{
+    font-size:15px;
+}
+
+.Banner>.text>.counter{
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.brandslogo>.imgs{
+    width:95%;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.newArriavals{
+    width:95%;
+}
+
+.newArriavalsGrid{
+    grid-template-columns:1fr;
+}
+
+.newArriavalsGrid .product img{
+    width:100%!important;
+    height:auto!important;
+}
+
+.dressStyle{
+    width:95%;
+}
+
+.dressStyle>.TopGrid,
+.dressStyle>.BottomGrid{
+    grid-template-columns:1fr;
+    margin:20px;
+}
+
+.dressStyle img{
+    width:100%;
+    height:auto!important;
+}
+
+.testimonial{
+    width:95%;
+}
+
+.testimonial>.testimonialGrid{
+    grid-template-columns:1fr;
+}
+
+.footer>.box{
+    width:95%;
+}
+
+.footer>.box>.top{
+    grid-template-columns:1fr;
+}
+
+.footer>.box>.bottom{
+    flex-direction:column;
+    text-align:center;
+}
+
+.newsletter{
+    width:95%;
+}
+
+.newsletter>.text{
+    font-size:28px;
+}
+
+}
