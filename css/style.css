@@ -634,3 +634,101 @@ img{
 }
 
 }
+/* Hamburger Menu */
+
+.hamburger{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+
+/* Mobile Header */
+
+@media(max-width:768px){
+
+.header{
+    width:95%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+}
+
+
+.header>.hamburger{
+    display:block;
+    order:2;
+}
+
+
+.header>.logo{
+    font-size:28px;
+    order:1;
+}
+
+
+.header>.navbar{
+    display:none;
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    z-index:100;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.header>.navbar a{
+    display:block;
+    padding:12px;
+}
+
+
+.header>.search{
+    display:none;
+}
+
+
+.header>.icons{
+    order:3;
+}
+
+
+}
+@media(max-width:768px){
+
+.Banner{
+    overflow:hidden;
+    min-height:600px;
+}
+
+
+.Banner>.img1{
+    width:180px;
+    right:-30px;
+    top:350px;
+}
+
+
+.Banner>.img2{
+    width:120px;
+    right:20px;
+    top:250px;
+}
+
+
+.Banner>.text h1{
+    font-size:38px;
+    width:100%;
+}
+
+
+.Banner>.text p{
+    width:100%;
+}
+
+
+}
