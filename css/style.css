@@ -469,7 +469,10 @@ img{
 }
 
 .header{
-    grid-template-columns:1fr;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    grid-template-columns:none;
     gap:20px;
     text-align:center;
 }
@@ -533,13 +536,68 @@ img{
     text-align:center;
 }
 
-.Topbar>.Topbargrid>.left,
+.Topbar>.Topbargrid>.center {
+    font-size: 12px;
+}
+
+.Topbar>.Topbargrid>.empty,
 .Topbar>.Topbargrid>.xmark{
     display:none;
 }
 
+/* Header & Hamburger for Mobile */
 .header{
     width:95%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position: relative;
+    padding: 15px 10px;
+}
+
+.hamburger{
+    display: block !important; /* Lazmi show karega */
+    font-size: 24px;
+    cursor: pointer;
+    order: 3;
+}
+
+.header>.logo {
+    font-size: 24px;
+    order: 1;
+}
+
+.header>.icons {
+    order: 2;
+    text-align: right;
+}
+
+.navbar{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.navbar a{
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar.active{
+    display: flex !important; /* Click hone par open karega */
+}
+
+.search{
+    display: none; /* Mobile par search bar hide rahegi */
 }
 
 .Banner{
@@ -547,29 +605,40 @@ img{
     margin-top: 10px;
 }
 
+/* Agar banner ki vector images mobile par bhi chahiyen toh display:none hata diya hai, agar phir bhi chupani hon toh comment out kar sakte hain */
 .Banner>.img1,
 .Banner>.img2{
-    display:none;
+    display: none; /* Vectors mobile par design kharab karte hain, isliye hide rakhe hain taaki text clearly dikhe */
 }
 
 .Banner>.text h1{
-    font-size:36px;
+    font-size: 28px; /* Mobile par text fit aaye isliye chota kiya */
 }
 
 .Banner>.text p{
-    font-size:15px;
+    font-size: 14px;
 }
 
 .Banner>.text>.counter{
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
+    width: 100%;
+}
+
+.Banner>.text>.counter>.box>.number {
+    font-size: 28px;
 }
 
 .brandslogo>.imgs{
     width:95%;
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
     justify-content:center;
+}
+
+.brandslogo>.imgs img {
+    height: 25px;
+    object-fit: contain;
 }
 
 .newArriavals{
@@ -577,6 +646,7 @@ img{
 }
 
 .newArriavalsGrid{
+    grid-rating-columns:1fr;
     grid-template-columns:1fr;
 }
 
@@ -592,7 +662,7 @@ img{
 .dressStyle>.TopGrid,
 .dressStyle>.BottomGrid{
     grid-template-columns:1fr;
-    margin:20px;
+    margin:10px;
 }
 
 .dressStyle img{
@@ -626,59 +696,7 @@ img{
 }
 
 .newsletter>.text{
-    font-size:28px;
-}
-
-}
-
-/* Hamburger */
-
-.hamburger{
-    display:none;
-    font-size:25px;
-    cursor:pointer;
-}
-
-
-@media(max-width:768px){
-
-.header{
-    width:95%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position: relative; /* <-- Yeh zaroori hai absolute navbar ke liye */
-}
-
-.hamburger{
-    display:block;
-    order:3;
-}
-
-.navbar{
-    display:none;
-    position:absolute;
-    top:100%; /* Header ke bilkul neechay open hoga */
-    left:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    padding:20px;
-    z-index:999;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Screen par acha dropdown effect dega */
-}
-
-.navbar a{
-    display:block;
-    padding:10px;
-}
-
-.navbar.active{
-    display:flex;
-}
-
-.search{
-    display:none;
+    font-size:24px;
 }
 
 }
